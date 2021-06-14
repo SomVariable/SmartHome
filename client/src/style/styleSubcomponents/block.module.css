@@ -1,0 +1,46 @@
+.block{
+    min-height: 163px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.14);
+    border-radius: 30px;
+}
+
+.container{
+    display:flex;
+    position: relative;
+    min-width: 268px;
+}
+
+.name{
+    position: absolute;
+    min-width: 79px;
+    height: 26px;
+    left: 10%;
+    top: 15%;
+
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 18px;
+    letter-spacing: 0.09em;
+
+    color: rgba(29, 35, 67, 0.63)
+}
+
+.content{
+    position: absolute;
+    width: 214px;
+    height: 43.06px;
+    left: 10%;
+    top: 30%;
+
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 51px;
+    line-height: 61px;
+    letter-spacing: 0.035em;
+
+    color: rgba(29, 35, 67, 0.75);
+}
