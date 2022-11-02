@@ -6,6 +6,7 @@ import members from '../img/sidebar/members.png';
 import rooms from '../img/sidebar/rooms.png';
 import statistics from '../img/sidebar/statisctics.png';
 import burger from '../img/sidebar/menuBurger.png';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () =>{
 return (
@@ -14,18 +15,18 @@ return (
             <div className={style.slidebar__btn}><img src={burger} alt="" /></div>
             <div className={style.logo}><a href="/"><img src={logo} alt="" /></a></div>
             <nav className ={style.sidebar__list}>
-                <a href="/members" className={style.item}>
+                <NavLink to="/members" className={style.item}>
                     <img src={members} alt="" />
                     <p>Members</p>
-                </a>
-                <a href="/rooms" className={style.item}>
+                </NavLink>
+                <NavLink to="/rooms" className={style.item}>
                     <img src={rooms} alt="" />
                     <p>Rooms</p>
-                </a>
-                <a href="/statistics" className={style.item}>
+                </NavLink>
+                <NavLink to="/statistics" className={style.item}>
                     <img src={statistics} alt="" />
                     <p>Statistics</p>
-                </a>
+                </NavLink>
             </nav>
         </div>
     </div>

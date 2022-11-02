@@ -36,8 +36,6 @@ export const login = (email, password, name, post, status) => {
             alert(e);
         }
     }
-    
-    
 }
 
 export const auth = () => {
