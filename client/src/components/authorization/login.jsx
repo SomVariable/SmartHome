@@ -11,6 +11,7 @@ const Login = () =>{
     const [name, setName] = useState('');
     const [post, setPost] = useState('');
     const dispatch = useDispatch();
+    
 return (
     <div className={style.content}>
         <div className={style.container}>
