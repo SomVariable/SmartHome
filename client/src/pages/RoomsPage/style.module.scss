@@ -1,0 +1,22 @@
+.roomsPage{
+    display: flex;
+    flex-direction: row;
+
+    &__contant{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.items{
+    display:flex;
+    list-style: none;
+    gap:30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item{
+    
+}

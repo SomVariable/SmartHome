@@ -1,0 +1,39 @@
+// === Variables === 
+
+$fw-light: 100;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-xxs: 10px;
+$fs-xs: 12px;
+$fs-s: 15px;
+$fs-m: 18px;
+$fs-l: 24px;
+$fs-xl: 36px;
+$fs-xxl: 48px;
+
+
+$base: rem(4px);
+
+$breakpoint-sm-min : 576px;
+$breakpoint-sm-max : $breakpoint-sm-min - 1;
+$breakpoint-md-min : 768px;
+$breakpoint-md-max : $breakpoint-md-min - 1;
+$breakpoint-lg-min : 992px;
+$breakpoint-lg-max : $breakpoint-lg-min - 1;
+$breakpoint-xl-min : 1200px;
+$breakpoint-xl-max : $breakpoint-xl-min - 1;
+$breakpoint-xxl-min : 1400px;
+$breakpoint-xxl-max : $breakpoint-xxl-min - 1;
+
+
+$transition: .2s;
+
+//colors
+
+$color-white: #fff;
+$color-accent: #65bdc0;
+$color-second: #E5E5E5;
+$color-danger: #d43f3f;
+

@@ -1,0 +1,14 @@
+.authorizationBar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right:20px;
+    top:100px;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    filter: drop-shadow(0px 1px 10px rgba(238, 119, 127, 0.36));
+}

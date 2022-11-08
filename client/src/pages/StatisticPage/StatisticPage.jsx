@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import style from '../../style/content.module.css';
+import style from "./style.module.scss"
 import {Modal} from '../../components/modal/Modal';
 
 const StatisticPage = () =>{

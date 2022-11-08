@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import style from '../../style/content.module.css';
-import Input from '../subcomponents/input';
+import style from './style.module.scss';
+import Input from '../subcomponents/input/Input';
 import {NavLink} from 'react-router-dom';
 import {login} from '../../action/user';
 import {useDispatch} from 'react-redux';

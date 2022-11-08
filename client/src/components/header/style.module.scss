@@ -1,0 +1,42 @@
+
+.header__bar{
+    display: flex;
+    flex-direction: row;
+    height: 46px;
+    align-items: center;
+    justify-content:flex-end;
+    margin: 45px 87px 0 0;
+    border:2px;
+}
+
+.header__bar .header__srearch{
+    border-radius: 40px;
+    width: 175px;
+    height: 34px;
+    text-align: center;
+    margin: 0 54px 0 0;
+}
+
+
+.header__srearch:active, .header__srearch:hover, .header__srearch:focus{ 
+    outline: none;
+    outline-offset: 0;
+}
+
+.header__bar .header__list{
+    display:flex;
+    flex-direction: row;
+    list-style:none;
+    padding:0;
+    align-items: center;
+}
+
+.header__bar .header__list .item{
+    margin: 0 5px;
+}
+
+
+.item{
+    margin-left: 30px;
+}
+

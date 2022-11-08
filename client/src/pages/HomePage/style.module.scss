@@ -1,0 +1,14 @@
+/* items by each list */
+.items{
+    list-style: none;
+    grid-row-start: 2;
+    grid-column-end: span 8;
+    display:flex;
+    flex-wrap: wrap;
+    padding:0;
+    margin-right: 60px;
+}
+
+.item{
+    margin-left: 30px;
+}

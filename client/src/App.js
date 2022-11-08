@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
-import Header from './components/Header'
-
-import Sidebar from './components/Sidebar'
-import {BrowserRouter, Route, Switch} from "react-router-dom"
-import { useDispatch, useSelector } from 'react-redux';
+import {BrowserRouter} from "react-router-dom"
+import { useDispatch} from 'react-redux';
 import { auth } from './action/user';
-import Routes from './components/routes/Routes';
+import Content from './components/content/Content';
+import Sidebar from './components/sidebar/Sidebar';
 
 function App() {
   
@@ -16,9 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Header />
-        <Routes />
-        <div className="background"></div>
+        <Content />
         <Sidebar />
       </div>
     </BrowserRouter>
