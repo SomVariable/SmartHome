@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './sidebar.module.css';
+import style from './sidebar.module.scss';
 
 import logo from '../../img/sidebar/logo.png';
 import members from '../../img/sidebar/members.png';

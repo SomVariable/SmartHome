@@ -1,73 +1,34 @@
+@use "../variables/variables" as v;
+.container{
+    padding: 23px 63px;
+}
+
 .vertical-index{
-    &--s{
-        padding-top: $base * 5;
-        padding-bottom: $base * 5;
-    }
-
-    &--m{
-        padding-top: $base * 15;
-        padding-bottom: $base * 15;
-    }
-
-    &--l{
-        padding-top: $base * 30;
-        padding-bottom: $base * 30;
-    }
+    padding-top: v.$base * 6;
+    padding-bottom: v.$base * 6;
 }
 
-@media (max-width: $breakpoint-sm-max){
+@media (max-width: v.$breakpoint-sm-max){
     .vertical-index{
-        &--s{
-            padding-top: $base * 2;
-            padding-bottom: $base * 2;
-        }
-    
-        &--m{
-            padding-top: $base * 7;
-            padding-bottom: $base * 7;
-        }
-    
-        &--l{
-            padding-top: $base * 15;
-            padding-bottom: $base * 15;
-        }
+        padding-top: v.$base * 4;
+        padding-bottom: v.$base * 4;
     }
     
 }
 
-@media (max-width: $breakpoint-md-min){
+@media (max-width: v.$breakpoint-md-min){
     .vertical-index{
-        &--s{
-            padding-top: $base * 2;
-            padding-bottom: $base * 2;
-        }
-    
-        &--m{
-            padding-top: $base * 7;
-            padding-bottom: $base * 7;
-        }
-    
-        &--l{
-            padding-top: $base * 15;
-            padding-bottom: $base * 15;
-        }
+        padding-top: v.$base * 3;
+        padding-bottom: v.$base * 3;
     }
     
 }
 
 
-@media (max-width: $breakpoint-sm-min){
+@media (max-width: v.$breakpoint-sm-min){
     .vertical-index{
-        
-        &--m{
-            padding-top: $base * 3;
-            padding-bottom: $base * 3;
-        }
-    
-        &--l{
-            padding-top: $base * 7;
-            padding-bottom: $base * 7;
-        }
+        padding-top: v.$base * 2;
+        padding-bottom: v.$base * 2;
     }
     
 }

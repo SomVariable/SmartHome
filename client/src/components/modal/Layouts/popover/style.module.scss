@@ -1,12 +1,11 @@
+@use 'src/style/variables/index.scss' as s;
+
 .container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: absolute;
+    top: -10px;
+    left: -20px;
     padding: 36px;
     box-sizing: border-box;
-  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +21,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
     z-index: 2;
     cursor: pointer;
   }
@@ -30,11 +28,9 @@
   .content {
     border: 1px solid #e6e6e6;
     box-sizing: border-box;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
+    padding: s.$base * 3;
     overflow: auto;
     background-color: #f8f8f8;
     z-index: 3;
-    min-width: 400px;
-    min-height: 600px;
   }

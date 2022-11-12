@@ -2,16 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 
-import styles from "./style.module.css";
+import styles from "./style.module.scss";
 import animationStyles from "./animation.module.css";
-import { ANIMATION_TIME } from "../../../consts/consts";
-
-const overlayAnimation = {
-  enter: animationStyles.overlayEnter,
-  enterActive: animationStyles.overlayEnterActive,
-  exit: animationStyles.overlayExit,
-  exitActive: animationStyles.overlayExitActive,
-};
+import { ANIMATION_TIME } from "../../../../consts/consts";
 
 const contentAnimation = {
   enter: animationStyles.contentEnter,
@@ -24,6 +17,13 @@ export const Layout = ({ onClose, children, opened }) => {
   const overlayRef = useRef();
   const contentRef = useRef();
 
+  useEffect(() => {
+    if(document){
+      document.addEventListener('click', onClose);
+      return () => document.removeEventListener('click', onClose);
+    }
+  }, []);
+
   const [animationIn, setAnimationIn] = useState(false);
 
   useEffect(() => {
@@ -32,16 +32,7 @@ export const Layout = ({ onClose, children, opened }) => {
 
   return (
     <div className={styles.container}>
-      <CSSTransition
-        in={animationIn}
-        nodeRef={overlayRef}
-        timeout={ANIMATION_TIME}
-        mountOnEnter
-        unmountOnExit
-        classNames={overlayAnimation}
-      >
-        <div ref={overlayRef} className={styles.overlay} onClick={onClose} />
-      </CSSTransition>
+
       <CSSTransition
         in={animationIn}
         nodeRef={contentRef}

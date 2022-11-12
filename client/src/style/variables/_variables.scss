@@ -1,3 +1,5 @@
+@use "../functions/functions";
+
 // === Variables === 
 
 $fw-light: 100;
@@ -14,7 +16,7 @@ $fs-xl: 36px;
 $fs-xxl: 48px;
 
 
-$base: rem(4px);
+$base: 4px;
 
 $breakpoint-sm-min : 576px;
 $breakpoint-sm-max : $breakpoint-sm-min - 1;
@@ -32,7 +34,8 @@ $transition: .2s;
 
 //colors
 
-$color-white: #fff;
+$color-light: #E5E5E5;
+$color-dark: #1D2343;
 $color-accent: #65bdc0;
 $color-second: #E5E5E5;
 $color-danger: #d43f3f;

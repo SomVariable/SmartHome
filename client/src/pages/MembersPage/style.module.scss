@@ -1,14 +1,53 @@
-// .memberPage{
+@use 'src/style/' as s;
 
-// }
-// .header{
+.header{
+    margin-bottom: s.$base * 5;
+}
 
-// }
+
 .items{
     display: flex;
-    list-style: none;
-
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-// .newMember{
 
-// }
+.member{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member:not(:last-child){
+    margin-right: s.$base * 15;
+}
+
+.addMember{
+    cursor: pointer;
+    width: s.$base * 62;
+    height: s.$base * 75;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width: s.$breakpoint-sm-max){
+    .items{
+        flex-direction: column;
+    } 
+}
+
+@media (max-width: s.$breakpoint-md-min){
+    .member:not(:last-child){
+        margin-right: 0;
+        margin-bottom: s.$base * 15;
+    }
+    
+}
+
+
+@media (max-width: s.$breakpoint-sm-min){
+    .items{
+        flex-direction: column;
+    }
+}

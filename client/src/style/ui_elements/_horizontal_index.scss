@@ -1,0 +1,30 @@
+@use "../variables/variables" as v;
+.horizontal-index{
+    padding-left: v.$base * 13;
+    padding-right: v.$base * 13;
+}
+
+@media (max-width: v.$breakpoint-sm-max){
+    .horizontal-index{
+        padding-left: v.$base * 7;
+        padding-right: v.$base * 7;
+    }
+    
+}
+
+@media (max-width: v.$breakpoint-md-min){
+    .horizontal-index{
+        padding-left: v.$base * 5;
+        padding-right: v.$base * 5;
+    }
+    
+}
+
+
+@media (max-width: v.$breakpoint-sm-min){
+    .horizontal-index{
+        padding-left: v.$base * 3;
+        padding-right: v.$base * 3;
+    }
+    
+}

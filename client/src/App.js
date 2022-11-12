@@ -5,8 +5,8 @@ import { auth } from './action/user';
 import Content from './components/content/Content';
 import Sidebar from './components/sidebar/Sidebar';
 
+
 function App() {
-  
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(auth());

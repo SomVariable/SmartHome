@@ -1,3 +1,5 @@
+@use 'src/style/variables/index.scss' as s;
+
 .input:active, .input:hover, .input:focus{ 
     outline: none;
     outline-offset: 0;

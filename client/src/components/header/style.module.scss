@@ -1,3 +1,8 @@
+.header{
+    color: red;
+}
+
+
 
 .header__bar{
     display: flex;
@@ -23,7 +28,7 @@
     outline-offset: 0;
 }
 
-.header__bar .header__list{
+.header__list{ 
     display:flex;
     flex-direction: row;
     list-style:none;
@@ -31,7 +36,8 @@
     align-items: center;
 }
 
-.header__bar .header__list .item{
+.header__list .item{
+    position: relative;
     margin: 0 5px;
 }
 
@@ -40,3 +46,6 @@
     margin-left: 30px;
 }
 
+.icon{
+    cursor: pointer;
+}

@@ -1,35 +1,44 @@
+@use "../variables/" as v;
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    @include quicksand;
-
     padding: 0;
     margin: 0;
-    font-weight: $fw-regular;
-    color: $color-blue-900;
+    font-weight: v.$fw-regular;
+    font-family: Lack;
+    color: v.$color-dark;
 }
 
 h2{
-    @include roboto; 
-    margin-bottom: $base * 4;
     text-transform: uppercase;
-    font-size: $fs-xxs;
-    line-height: $base * 3;
+    font-size: v.$fs-xxl;
+    font-style:normal;
+    line-height: v.$base * 3;
     letter-spacing: 0.1em;
 }
 
-// .header{
-//     grid-column-start: 1;
-//     grid-column-end: span 12;
-//     height: 58px;
-//     font-family: Lack;
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 48px;
-//     line-height: 58px;
-//     letter-spacing: 0.09em;
-//     color: #1D2343;
-// }
+@media (max-width: v.$breakpoint-sm-max){
+    h2{
+        font-size: v.$fs-xxl;
+    }    
+    
+}
+
+@media (max-width: v.$breakpoint-md-min){
+    h2{
+        font-size: v.$fs-xl;
+    } 
+    
+}
+
+
+@media (max-width: v.$breakpoint-sm-min){
+    h2{
+        font-size: v.$fs-l;
+    } 
+    
+}

@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import Login from '../../components/authorization/login';
 import Registration from '../../components/authorization/registration';
+import style from "./style.module.scss"
 
 function AuthorizationPage() {
     const isAuth = useSelector(state => state.user.isAuth);

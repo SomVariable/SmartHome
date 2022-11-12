@@ -1,3 +1,5 @@
+@use 'src/style/variables/index.scss' as s;
+
 .sidebar{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -51,3 +53,8 @@
     margin:0 0 45px 0;
 }
 
+@media (max-width: s.$breakpoint-md-min){
+    .sidebar{
+        display: none;
+    }
+}

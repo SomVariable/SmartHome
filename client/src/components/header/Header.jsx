@@ -5,21 +5,34 @@ import settings from '../../img/header/settings.png';
 import account from '../../img/header/account.png';
 import { useSelector } from 'react-redux';
 import AuthorizationBar from '../subcomponents/authorizationBar/AuthorizationBar';
+import { Popover } from '../modal/Popover';
+import { Popup } from '../modal/Popup';
+import { useRef } from 'react';
 
 
 const Header = () =>{
-    const [isNavbar, setNavbar] = useState(false);
+    const [authorizationOpened, setAuthorizationOpened] = useState(false);
+    const [newsOpened, setNewsOpened] = useState(false);
+    const [settingsOpened, setAsSttingsOpened] = useState(false);
     const isAuth = useSelector(state => state.user.isAuth);
+    const authRef = useRef();
+    const newsRef = useRef();
+
+
 return (
     <div className={style.header}>
         <div className={style.header__bar}>
             <input type="text" placeholder = 'search' className={style.header__srearch} />
             <ul className={style.header__list} >
-                <li className={style.item}><i href='#'><img src={alert} alt="" /></i></li>
-                <li className={style.item}><i href='#'><img src={settings} alt="" /></i></li>
-                <li className={style.item} >
-                    {isNavbar && <AuthorizationBar isAuth = {isAuth} />}
-                    <img src={account} alt="" onClick = {() => { setNavbar(!isNavbar);}} />
+                <li className={style.item} ref = {newsRef}>
+                    <Popover opened={newsOpened} onClose={() => setNewsOpened(false)} parent = {newsRef.current}><h2>sdfsfs</h2></Popover>
+                    <i href='#'><img className = {style.icon} src={alert} alt="" onClick = {() => { setNewsOpened(true);}} /></i></li>
+                <li className={style.item}>
+                    <Popup opened={settingsOpened} onClose={() => setAsSttingsOpened(false)}> <h2>Simple animation content</h2></Popup>
+                    <i href='#'><img className = {style.icon} src={settings} alt="" onClick={() => setAsSttingsOpened(true)} /></i></li>
+                <li className={style.item} ref = {authRef}>
+                    <Popover opened={authorizationOpened} onClose={() => setAuthorizationOpened(false)} parent = {authRef.current}> <AuthorizationBar isAuth = {isAuth} /></Popover>
+                    <img className = {style.icon} src={account} alt="" onClick = {() => { setAuthorizationOpened(true);}} />
                 </li>
             </ul>
         </div>

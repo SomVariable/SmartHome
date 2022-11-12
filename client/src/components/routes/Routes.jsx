@@ -10,15 +10,13 @@ import style from "./style.module.scss"
 function Routes() {
   return (
     <>
-    <div className={style.container}>
-      <Switch>
-        <Route exact  path = "/" component = {HomePage}/>
-        <Route path = "/members" component = {MembersPage}/>
-        <Route path = "/rooms" component = {RoomsPage}/>
-        <Route path = "/statistics" component = {StatisticPage}/>
-        <AuthorizationPage />
-      </Switch>
-    </div>
+    <Switch>
+      <Route exact  path = "/" component = {HomePage}/>
+      <Route path = "/members" component = {MembersPage}/>
+      <Route path = "/rooms" component = {RoomsPage}/>
+      <Route path = "/statistics" component = {StatisticPage}/>
+      <AuthorizationPage />
+    </Switch>
   </>
   )
 }
