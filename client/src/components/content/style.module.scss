@@ -6,6 +6,14 @@
     min-height: 320px;
     background-color: s.$color-light;
     border-radius:100px;
+    padding-top: 50px;
+    overflow: auto;
+    scroll-behavior: auto;
+    overflow-x: hidden;
+}
+
+.page{
+    padding: 20px;
 }
 
 
@@ -13,6 +21,11 @@
     .content{
         grid-column-start: 1;
         grid-column-end: 13;
+        border-radius: 40px;
+    }
+
+    .page{
+        padding: 0;
     }
     
 }

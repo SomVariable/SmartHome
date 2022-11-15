@@ -3,7 +3,7 @@ import {BrowserRouter} from "react-router-dom"
 import { useDispatch} from 'react-redux';
 import { auth } from './action/user';
 import Content from './components/content/Content';
-import Sidebar from './components/sidebar/Sidebar';
+import Navigation from './pages/Navigation/Navigation';
 
 
 function App() {
@@ -15,7 +15,8 @@ function App() {
     <BrowserRouter>
       <div className="app-wrapper">
         <Content />
-        <Sidebar />
+        <Navigation />
+
       </div>
     </BrowserRouter>
   );

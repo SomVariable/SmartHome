@@ -1,6 +1,4 @@
-.header{
-    color: red;
-}
+@use 'src/style/' as s;
 
 
 
@@ -9,17 +7,17 @@
     flex-direction: row;
     height: 46px;
     align-items: center;
+    gap: 54px;
     justify-content:flex-end;
     margin: 45px 87px 0 0;
     border:2px;
 }
 
-.header__bar .header__srearch{
+.header__srearch{
     border-radius: 40px;
     width: 175px;
     height: 34px;
     text-align: center;
-    margin: 0 54px 0 0;
 }
 
 
@@ -33,19 +31,32 @@
     flex-direction: row;
     list-style:none;
     padding:0;
+    gap: 30px;
+    margin: 0;
     align-items: center;
 }
 
 .header__list .item{
     position: relative;
-    margin: 0 5px;
 }
 
 
-.item{
-    margin-left: 30px;
-}
 
 .icon{
     cursor: pointer;
+}
+
+
+@media (max-width: s.$breakpoint-md-min){
+    .header__bar{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; 
+    }
+
+    .header__bar{
+        margin: 0;
+    }
+
 }

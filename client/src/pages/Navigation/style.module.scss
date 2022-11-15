@@ -1,0 +1,6 @@
+@use 'src/style/' as s;
+
+.sidebarContent{
+    background-color: s.$color-accent;
+    border-radius: 12px;
+}

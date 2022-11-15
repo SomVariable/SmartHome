@@ -8,6 +8,7 @@ import AuthorizationBar from '../subcomponents/authorizationBar/AuthorizationBar
 import { Popover } from '../modal/Popover';
 import { Popup } from '../modal/Popup';
 import { useRef } from 'react';
+import Settings from '../setings/Settings';
 
 
 const Header = () =>{
@@ -28,7 +29,7 @@ return (
                     <Popover opened={newsOpened} onClose={() => setNewsOpened(false)} parent = {newsRef.current}><h2>sdfsfs</h2></Popover>
                     <i href='#'><img className = {style.icon} src={alert} alt="" onClick = {() => { setNewsOpened(true);}} /></i></li>
                 <li className={style.item}>
-                    <Popup opened={settingsOpened} onClose={() => setAsSttingsOpened(false)}> <h2>Simple animation content</h2></Popup>
+                    <Popup opened={settingsOpened} onClose={() => setAsSttingsOpened(false)}><Settings/></Popup>
                     <i href='#'><img className = {style.icon} src={settings} alt="" onClick={() => setAsSttingsOpened(true)} /></i></li>
                 <li className={style.item} ref = {authRef}>
                     <Popover opened={authorizationOpened} onClose={() => setAuthorizationOpened(false)} parent = {authRef.current}> <AuthorizationBar isAuth = {isAuth} /></Popover>

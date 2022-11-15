@@ -8,7 +8,7 @@ function Content() {
   return (
     <div className={style.content}>
         <Header />
-        <div className="horizontal-index vertical-index">
+        <div className={`${style.page} horizontal-index vertical-index`}>
         <Routes />
         </div>
     </div>

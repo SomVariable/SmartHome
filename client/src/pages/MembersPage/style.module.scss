@@ -1,5 +1,7 @@
 @use 'src/style/' as s;
 
+
+
 .header{
     margin-bottom: s.$base * 5;
 }
@@ -9,16 +11,15 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap:s.$base * 15;
+    padding: 0;
+    
 }
 
 .member{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.member:not(:last-child){
-    margin-right: s.$base * 15;
 }
 
 .addMember{
@@ -38,16 +39,11 @@
 }
 
 @media (max-width: s.$breakpoint-md-min){
-    .member:not(:last-child){
-        margin-right: 0;
-        margin-bottom: s.$base * 15;
-    }
+    
     
 }
 
 
 @media (max-width: s.$breakpoint-sm-min){
-    .items{
-        flex-direction: column;
-    }
+    
 }

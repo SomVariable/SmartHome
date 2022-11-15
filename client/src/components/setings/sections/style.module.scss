@@ -1,0 +1,22 @@
+.item{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.09em;
+    color: rgba(255, 245, 245, 0.65);
+    text-decoration:none;
+    cursor: pointer;
+
+}
+
+.item img{
+    margin:0 0 20px 0;
+}
+
+.item p{
+    margin:0 0 45px 0;
+}

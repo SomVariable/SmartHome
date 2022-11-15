@@ -1,17 +1,22 @@
 import React from 'react';
 import Block from '../../components/subcomponents/block/Block.jsx';
 import style from "./style.module.scss"
-import kitchen from '../../img/content/rooms/kitchen.png';
-import badroom from '../../img/content/rooms/badroom.png';
-import bathroom from '../../img/content/rooms/bathroom.png';
-import livingroom from '../../img/content/rooms/livingroom.png';
-import Room from '../../components/room/Room';
+
+import burger from '../../img/sidebar/rooms.png';
+import Rooms from '../../components/rooms/Rooms.jsx';
+import { useState } from 'react';
+import { Popup } from '../../components/modal/Popup.jsx';
+
 
 const RoomsPage = props =>{
+  const [roomsNavigationOpened, setroomsNavigationOpened] = useState(false);
+
 return (
     <div className={style.roomsPage}>
         <div className={style.roomsPage__contant}>
             <h2 className={style.header}>Kitchen</h2>
+            <div className={style.roomsBurger}><img src={burger} alt="" onClick={() => setroomsNavigationOpened(true)} /></div>
+            <Popup opened={roomsNavigationOpened} onClose={() => setroomsNavigationOpened(false)}> <div className={style.roomsNavigation}><Rooms /></div> </Popup>
             <ul className={style.items}>
                 <li className={style.item}><Block name = 'Room Temperature' content = '+23.5°C' /></li>
                 <li className={style.item}><Block name = 'room Humidity' content = '40%' /></li>
@@ -25,12 +30,7 @@ return (
             </ul>
         </div>
         
-        <ul className={style.rooms}>
-            <Room imgSrc = {kitchen}/>
-            <Room imgSrc = {badroom}/>
-            <Room imgSrc = {bathroom}/>
-            <Room imgSrc = {livingroom}/>
-        </ul>
+         <div className={style.rooms}><Rooms  /></div>
     </div>
 );
 }

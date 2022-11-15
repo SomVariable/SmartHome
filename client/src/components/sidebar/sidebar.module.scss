@@ -1,4 +1,4 @@
-@use 'src/style/variables/index.scss' as s;
+@use 'src/style/' as s;
 
 .sidebar{
     grid-column-start: 1;
@@ -7,51 +7,7 @@
     border-radius: 100px 0 0 100px;
 }
 
-.content{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 30px;
-}
 
-.slidebar__btn{
-    position: absolute;
-    width:50px;
-    height: 50px;
-    right: -90px;
-    top: 40px;
-}
-
-.slidebar__btn img{
-    width:50px;
-    height: 50px;
-}
-
-.logo{
-    margin-bottom:118px;
-}
-
-.sidebar__list .item{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: Lack;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    letter-spacing: 0.09em;
-    color: rgba(255, 245, 245, 0.65);
-    text-decoration:none;
-
-}
-
-.sidebar__list .item img{
-    margin:0 0 20px 0;
-}
-
-.sidebar__list .item p{
-    margin:0 0 45px 0;
-}
 
 @media (max-width: s.$breakpoint-md-min){
     .sidebar{

@@ -3,7 +3,6 @@
 
 html{
     overflow:  hidden;
-    color: s.$color-second;
   }
   body {
     margin: 0;
@@ -26,4 +25,16 @@ html{
     border-radius:100px;
   }
 
+
+  @media (max-width: s.$breakpoint-md-min){
+    .content{
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+
+    .app-wrapper{
+      border-radius: 40px;
+      
+    }
+}
   
