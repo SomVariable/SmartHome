@@ -5,10 +5,10 @@ import style from "./style.module.scss"
 
 
 function Content({currentComponent, chooseContent}) {
-
- 
   return (
-    chooseContent(currentComponent)
+    <div className = {style.settingsContent}>
+      {chooseContent(currentComponent)}
+    </div>
   )
 }
 

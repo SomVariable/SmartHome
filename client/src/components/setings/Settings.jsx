@@ -28,7 +28,7 @@ function Settings() {
   const [currentComponent, setCurrentComponent] = useState()
   return (
     <div className = {style.settings}>
-        <Sections setCurrentComponent = {setCurrentComponent}/>
+        <Sections currentComponent = {currentComponent} setCurrentComponent = {setCurrentComponent}/>
         <Content currentComponent = {currentComponent} chooseContent = {chooseContent}/>
     </div>
   )
