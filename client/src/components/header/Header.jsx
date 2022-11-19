@@ -32,7 +32,7 @@ return (
                     <Popup opened={settingsOpened} onClose={() => setAsSttingsOpened(false)}><Settings/></Popup>
                     <i href='#'><img className = {style.icon} src={settings} alt="" onClick={() => setAsSttingsOpened(true)} /></i></li>
                 <li className={style.item} ref = {authRef}>
-                    <Popover opened={authorizationOpened} onClose={() => setAuthorizationOpened(false)} parent = {authRef.current}> <AuthorizationBar isAuth = {isAuth} /></Popover>
+                <Popover opened={authorizationOpened} onClose={() => setAuthorizationOpened(false)} parent = {authRef.current}> <AuthorizationBar isAuth = {isAuth} /></Popover>
                     <img className = {style.icon} src={account} alt="" onClick = {() => { setAuthorizationOpened(true);}} />
                 </li>
             </ul>

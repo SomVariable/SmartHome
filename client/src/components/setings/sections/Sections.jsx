@@ -35,8 +35,8 @@ function Sections({currentComponent, setCurrentComponent}) {
   return (
     <nav className = {style.sectionsNavigation}>
         <div className={homeSettings} onClick = {() => setCurrentComponent('homeSettings')}>
-            <img src={members} alt=""  className = {style.sectionLogo}/>
-            <h3 className = {style.sectionHeader}>Members</h3>
+            <img src={rooms} alt=""  className = {style.sectionLogo}/>
+            <h3 className = {style.sectionHeader}>Home</h3>
         </div>
         <div className={membersSettings} onClick = {() => setCurrentComponent('membersSettings')}>
             <img src={members} alt=""  className = {style.sectionLogo}/>

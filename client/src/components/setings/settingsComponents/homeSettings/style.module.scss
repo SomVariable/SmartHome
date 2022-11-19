@@ -1,7 +1,20 @@
+@use 'src/style/' as s;
+
 .homeSettings{
     height: 100%;
-    overflow: scroll;
-    overflow-x: hidden;
+    position: relative;
+}
+
+.checkList{
+    width: 150px;
+    position: absolute;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: s.$base * 3;
+    background-color: #f8f8f8;
+    top: 30px;
+    left: 0;
 }
 
 .moduleAdditionBtn{

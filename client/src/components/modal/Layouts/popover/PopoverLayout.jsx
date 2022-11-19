@@ -14,24 +14,24 @@ const contentAnimation = {
 };
 
 export const Layout = ({ onClose, children, opened }) => {
-  const overlayRef = useRef();
   const contentRef = useRef();
 
-  useEffect(() => {
-    if(document){
-      document.addEventListener('click', onClose);
-      return () => document.removeEventListener('click', onClose);
-    }
-  }, []);
-
   const [animationIn, setAnimationIn] = useState(false);
+
+
+  useEffect(() => {
+      document?.addEventListener('click', onClose);
+      return () => {
+        document.removeEventListener('click', onClose);
+      }
+  }, []);
 
   useEffect(() => {
     setAnimationIn(opened);
   }, [opened]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={contentRef} onClick = {(e) => e.stopPropagation()}>
 
       <CSSTransition
         in={animationIn}
@@ -41,9 +41,9 @@ export const Layout = ({ onClose, children, opened }) => {
         unmountOnExit
         classNames={contentAnimation}
       >
-        <div ref={contentRef} className={styles.content}>
-          {children}
-        </div>
+        
+        {children}
+        
       </CSSTransition>
     </div>
   );
