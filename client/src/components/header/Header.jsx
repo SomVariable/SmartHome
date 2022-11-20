@@ -26,13 +26,21 @@ return (
             <input type="text" placeholder = 'search' className={style.header__srearch} />
             <ul className={style.header__list} >
                 <li className={style.item} ref = {newsRef}>
-                    <Popover opened={newsOpened} onClose={() => setNewsOpened(false)} parent = {newsRef.current}><h2>sdfsfs</h2></Popover>
+                    <Popover opened={newsOpened} onClose={() => setNewsOpened(false)} parent = {newsRef.current}>
+                        <div className={style.popover}>
+                            <h2>sdfsfs</h2>
+                        </div>
+                    </Popover>
                     <i href='#'><img className = {style.icon} src={alert} alt="" onClick = {() => { setNewsOpened(true);}} /></i></li>
                 <li className={style.item}>
                     <Popup opened={settingsOpened} onClose={() => setAsSttingsOpened(false)}><Settings/></Popup>
                     <i href='#'><img className = {style.icon} src={settings} alt="" onClick={() => setAsSttingsOpened(true)} /></i></li>
                 <li className={style.item} ref = {authRef}>
-                <Popover opened={authorizationOpened} onClose={() => setAuthorizationOpened(false)} parent = {authRef.current}> <AuthorizationBar isAuth = {isAuth} /></Popover>
+                <Popover opened={authorizationOpened} onClose={() => setAuthorizationOpened(false)} parent = {authRef.current}> 
+                    <div className={style.popover}>
+                        <AuthorizationBar isAuth = {isAuth} />
+                    </div>
+                </Popover>
                     <img className = {style.icon} src={account} alt="" onClick = {() => { setAuthorizationOpened(true);}} />
                 </li>
             </ul>
